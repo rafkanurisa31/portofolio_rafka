@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --bg-color: #080c14;
   --card-bg: #111827;
@@ -258,4 +259,280 @@ footer {
   color: #4b5563;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
   margin-top: 4rem;
+=======
+:root {
+  --bg-color: #f8fafc;        /* Slate 50 (Sangat Cerah Bersih) */
+  --card-bg: #ffffff;         /* Putih Bersih */
+  --text-main: #0f172a;       /* Slate 900 (Gelap Profesional) */
+  --text-muted: #475569;      /* Slate 600 */
+  --primary: #4f46e5;         /* Indigo 600 (Warna Brand Teknologi) */
+  --primary-light: #e0e7ff;   /* Indigo 100 */
+  --border-color: #e2e8f0;    /* Slate 200 */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Header & Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 4rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+header ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+header ul a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+header ul a:hover {
+  color: var(--text-main);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  /* Soft Mesh Gradient Cerah */
+  background: radial-gradient(rgba(79, 70, 229, 0.05) 0%, transparent 70%),
+              radial-gradient(rgba(14, 165, 233, 0.05) 0%, transparent 50%);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 28px; /* Squirrel-shape modern style */
+  background: linear-gradient(135deg, var(--primary), #0ea5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.6rem;
+  letter-spacing: -1px;
+}
+
+/* Typewriter */
+.typewriter-container {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  height: 25px;
+}
+
+#typewriter {
+  color: var(--primary);
+  font-weight: 600;
+  border-right: 2px solid var(--primary);
+  animation: blink 0.75s step-end infinite;
+  padding-right: 3px;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary); }
+}
+
+/* Buttons */
+.btn-wrap {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.6rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-wa {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+.btn-wa:hover {
+  background: #16a34a;
+  color: white;
+}
+
+.btn-ig {
+  background: #fff;
+  color: #64748b;
+  border: 1px solid var(--border-color);
+}
+.btn-ig:hover {
+  color: #db2777;
+  border-color: #fbcfe8;
+  background: #fdf2f8;
+}
+
+/* Content Sections */
+section.content {
+  padding: 5rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section.content h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+}
+
+/* Hobi Grid */
+.hobi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.hobi-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  transition: all 0.25s ease;
+}
+
+.hobi-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.hobi-card h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: var(--text-main);
+}
+
+.hobi-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Contact Box */
+.contact-box {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.contact-box p {
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  border-top: 1px solid var(--border-color);
+  background-color: #fff;
+}
+
+/* Responsivitas Layar Kecil (HP) */
+@media (max-width: 640px) {
+  header { padding: 1.2rem 1.5rem; }
+  header ul { gap: 1.2rem; }
+  .hero h1 { font-size: 2.2rem; }
+>>>>>>> c948910 (Update website)
 }
