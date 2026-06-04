@@ -3,7 +3,7 @@
    script.js
    ================================ */
 
-// Smooth scroll + active nav
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
@@ -14,7 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Fade-in on scroll
+// Fade-in on scroll (Hanya untuk kartu keahlian yang tersisa)
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -24,7 +24,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.skill-card, .work-card, .stat-box').forEach(el => {
+document.querySelectorAll('.skill-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
