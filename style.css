@@ -1,0 +1,261 @@
+:root {
+  --bg-color: #080c14;
+  --card-bg: #111827;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --primary-glow: #00f2fe;
+  --secondary-glow: #4facfe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* Header & Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: rgba(8, 12, 20, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-glow), var(--secondary-glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+header ul a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header ul a:hover {
+  color: var(--primary-glow);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: radial-gradient(circle at center, rgba(79, 172, 254, 0.1) 0%, transparent 65%);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
+  border: 4px solid var(--bg-color);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+}
+
+/* Typewriter Text Container */
+.typewriter-container {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  height: 30px;
+}
+
+#typewriter {
+  color: var(--primary-glow);
+  font-weight: 600;
+  border-right: 2px solid var(--primary-glow);
+  animation: blink 0.75s step-end infinite;
+  padding-right: 4px;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary-glow); }
+}
+
+/* Buttons */
+.btn-wrap {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-wa {
+  background: #25D366;
+  color: white;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
+}
+
+.btn-ig {
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  box-shadow: 0 5px 15px rgba(220, 39, 67, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--secondary-glow), var(--primary-glow));
+  color: #080c14;
+  box-shadow: 0 5px 15px rgba(0, 242, 254, 0.2);
+}
+
+/* Content Sections */
+section.content {
+  padding: 5rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section.content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+section.content h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background: var(--primary-glow);
+  border-radius: 2px;
+}
+
+/* Hobi Grid */
+.hobi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.hobi-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hobi-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-glow);
+  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
+}
+
+.hobi-card .icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.hobi-card:hover .icon {
+  transform: scale(1.2);
+}
+
+.hobi-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.hobi-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Contact Box */
+.contact-box {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 4rem 2rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.contact-box p {
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  margin-top: 4rem;
+}
