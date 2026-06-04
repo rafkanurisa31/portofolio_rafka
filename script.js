@@ -1,5 +1,5 @@
 /* ================================
-   PORTFOLIO — CLEAN & BRIGHT
+   PORTFOLIO — CLEAN & BRIGHT WITH ANIMATIONS
    script.js
    ================================ */
 
@@ -14,7 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Fade-in on scroll (Hanya untuk kartu keahlian yang tersisa)
+// Fade-in on scroll (Untuk kartu keahlian & organisasi)
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -24,9 +24,10 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.skill-card').forEach(el => {
+// Mendaftarkan elemen yang ingin diberi efek fade-in saat di-scroll
+document.querySelectorAll('.skill-card, .activity-card').forEach(el => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  el.style.transform = 'translateY(30px)';
+  el.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
   observer.observe(el);
 });

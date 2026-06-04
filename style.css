@@ -1,5 +1,5 @@
 /* ================================
-   PORTFOLIO — CLEAN & BRIGHT
+   PORTFOLIO — CLEAN & BRIGHT WITH ANIMATIONS
    style.css
    ================================ */
 
@@ -125,7 +125,13 @@ h1 span { color: var(--accent); }
 }
 .btn-outline:hover { background: var(--accent-light); }
 
-/* Hero Card */
+/* Hero Card & Floating Animation */
+@keyframes floatAnimation {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
 .hero-card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -134,6 +140,8 @@ h1 span { color: var(--accent); }
   width: 240px;
   flex-shrink: 0;
   text-align: center;
+  animation: floatAnimation 4s ease-in-out infinite; /* Efek Melayang */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
 
 .avatar {
@@ -213,9 +221,9 @@ h2 {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.skill-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(79,124,255,0.1); }
+.skill-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(79,124,255,0.12); }
 
 .skill-icon {
   font-size: 1.8rem;
@@ -229,6 +237,43 @@ h2 {
 .skill-card p {
   font-size: 0.82rem;
   color: var(--text-dim);
+}
+
+/* ---- ACTIVITIES ---- */
+.activities { background: var(--white); max-width: 100%; padding: 4rem 0; }
+.activities h2, .activities .activity-container { max-width: 1000px; margin-left: auto; margin-right: auto; padding: 0 2rem; }
+
+.activity-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  transition: transform 0.3s ease;
+}
+.activity-card:hover { transform: scale(1.01); }
+
+.activity-badge {
+  display: inline-block;
+  background: #ffedd5;
+  color: #ea580c;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.activity-card h3 { font-size: 1.3rem; margin-bottom: 0.75rem; }
+.activity-desc { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 700px; }
+
+.activity-values { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.val-tag {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
 /* ---- CONTACT ---- */
