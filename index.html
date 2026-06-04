@@ -1,197 +1,370 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Rafka Nurisa</title>
-  <!-- Font Awesome untuk Icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Memanggil File CSS Eksternal -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Rafka Nurisa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header>
-    <h2>Rafka's Hub</h2>
-    <ul>
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#hobi">Hobi</a></li>
-      <li><a href="#contact">Kontak</a></li>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">RN<span class="gold">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">Tentang</a></li>
+      <li><a href="#work" class="nav-link">Karya</a></li>
+      <li><a href="#skills" class="nav-link">Keahlian</a></li>
+      <li><a href="#contact" class="nav-link">Kontak</a></li>
     </ul>
-  </header>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" class="mobile-link">Tentang</a></li>
+      <li><a href="#work" class="mobile-link">Karya</a></li>
+      <li><a href="#skills" class="mobile-link">Keahlian</a></li>
+      <li><a href="#contact" class="mobile-link">Kontak</a></li>
+    </ul>
+  </div>
 
   <!-- Hero Section -->
-  <section class="hero" id="about">
-    <div class="avatar">RN</div>
-    <h1>Rafka Nurisa</h1>
-    <div class="typewriter-container">
-      Saya adalah <span id="typewriter"></span>
+  <section class="hero" id="hero">
+    <div class="hero-bg-text">PORTFOLIO</div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up">Creative &amp; Developer — Futsal · Game · Musik</p>
+      <h1 class="hero-title">
+        <span class="reveal-up delay-1">Rafka</span>
+        <span class="reveal-up delay-2 italic-gold">Nurisa</span>
+      </h1>
+      <p class="hero-sub reveal-up delay-3">
+        Menciptakan pengalaman digital yang<br/>
+        <em>bermakna</em> dan tak terlupakan.
+      </p>
+      <div class="hero-cta reveal-up delay-4">
+        <a href="#work" class="btn-primary">Lihat Karya</a>
+        <a href="#contact" class="btn-ghost">Hubungi Saya</a>
+      </div>
     </div>
-    <div class="btn-wrap">
-      <a href="https://wa.me/6289521606404" target="_blank" class="btn btn-wa">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-      </a>
-      <a href="https://instagram.com/rapkanr_" target="_blank" class="btn btn-ig">
-        <i class="fa-brands fa-instagram"></i> @rapkanr_
-      </a>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-number">01</div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="section-label">
+      <span>—</span> Tentang Saya <span class="section-num">02</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-left">
+        <div class="about-img">
+          <div class="about-img-inner">
+            <div class="about-placeholder">RN</div>
+          </div>
+        </div>
+        <div class="about-img-tag">
+          <span class="gold">5+</span> Tahun Pengalaman
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <h2 class="section-title">Saya adalah seorang <em>kreator</em> digital</h2>
+        <p>
+          Seorang creative developer yang passionate dalam membangun pengalaman digital
+          yang menarik dan fungsional. Di luar layar, saya mengisi energi dengan
+          futsal, gaming, dan musik.
+        </p>
+        <p>
+          Setiap proyek adalah kesempatan untuk bercerita — melalui piksel, interaksi,
+          dan detail-detail kecil yang membuat perbedaan besar.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">40+</span>
+            <span class="stat-label">Proyek Selesai</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">25+</span>
+            <span class="stat-label">Klien Puas</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">8</span>
+            <span class="stat-label">Penghargaan</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn-primary">Mari Berkolaborasi</a>
+      </div>
     </div>
   </section>
 
-  <!-- Hobi Section -->
-  <section class="content" id="hobi">
-    <h3>Hobi & Minat</h3>
-    <div class="hobi-grid">
+  <!-- Work Section -->
+  <section class="work" id="work">
+    <div class="section-label">
+      <span>—</span> Karya Pilihan <span class="section-num">03</span>
+    </div>
+    <h2 class="section-title centered reveal-up">Proyek <em>Terbaik</em></h2>
 
-      <div class="hobi-card">
-        <div class="icon">🎮</div>
-        <h4>Gaming</h4>
-        <p>Bermain game mobile dan PC di waktu senggang untuk refreshing dan mengasah strategi kompetitif.</p>
+    <div class="work-grid">
+
+      <article class="work-card work-card--large reveal-up delay-1" data-index="01">
+        <div class="work-card-img" style="background: linear-gradient(135deg, #1a0a00 0%, #4a1500 100%);">
+          <div class="work-card-overlay">
+            <div class="work-mockup wm-browser">
+              <div class="wm-bar"><span></span><span></span><span></span></div>
+              <div class="wm-body">
+                <div class="wm-hero-strip"></div>
+                <div class="wm-content">
+                  <div class="wm-line long"></div>
+                  <div class="wm-line mid"></div>
+                  <div class="wm-grid">
+                    <div class="wm-card"></div>
+                    <div class="wm-card"></div>
+                    <div class="wm-card"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card-info">
+          <span class="work-tag">Web Design</span>
+          <h3>Nusantara Luxury Hotel</h3>
+          <p>Redesign website premium hotel dengan pendekatan editorial yang mengutamakan visual storytelling.</p>
+          <a href="#" class="work-link">Lihat Proyek <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="work-card reveal-up delay-2" data-index="02">
+        <div class="work-card-img" style="background: linear-gradient(135deg, #000d1a 0%, #002244 100%);">
+          <div class="work-card-overlay">
+            <div class="work-mockup wm-app">
+              <div class="wm-phone">
+                <div class="wm-notch"></div>
+                <div class="wm-screen">
+                  <div class="wm-app-header"></div>
+                  <div class="wm-app-cards">
+                    <div class="wm-app-card"></div>
+                    <div class="wm-app-card small"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card-info">
+          <span class="work-tag">Mobile App</span>
+          <h3>Batik Nusantara App</h3>
+          <p>Aplikasi e-commerce untuk produk batik premium Indonesia.</p>
+          <a href="#" class="work-link">Lihat Proyek <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="work-card reveal-up delay-3" data-index="03">
+        <div class="work-card-img" style="background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 100%);">
+          <div class="work-card-overlay">
+            <div class="work-mockup wm-dashboard">
+              <div class="wm-db-header">
+                <div class="wm-db-title"></div>
+                <div class="wm-db-nav">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="wm-db-body">
+                <div class="wm-db-sidebar">
+                  <div class="wm-db-item active"></div>
+                  <div class="wm-db-item"></div>
+                  <div class="wm-db-item"></div>
+                </div>
+                <div class="wm-db-main">
+                  <div class="wm-db-stats">
+                    <div class="wm-db-stat"></div>
+                    <div class="wm-db-stat"></div>
+                    <div class="wm-db-stat"></div>
+                  </div>
+                  <div class="wm-db-chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card-info">
+          <span class="work-tag">Dashboard UI</span>
+          <h3>Analytics Platform</h3>
+          <p>Dashboard data analitik dengan visualisasi real-time yang elegan.</p>
+          <a href="#" class="work-link">Lihat Proyek <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="work-card work-card--wide reveal-up delay-4" data-index="04">
+        <div class="work-card-img" style="background: linear-gradient(135deg, #0a0a00 0%, #1a1a00 50%, #2a1500 100%);">
+          <div class="work-card-overlay">
+            <div class="work-mockup wm-brand">
+              <div class="wm-brand-circle"></div>
+              <div class="wm-brand-lines">
+                <div class="wm-brand-line"></div>
+                <div class="wm-brand-line short"></div>
+                <div class="wm-brand-line mid"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="work-card-info">
+          <span class="work-tag">Brand Identity</span>
+          <h3>Rempah Coffee Roasters</h3>
+          <p>Identitas merek lengkap untuk kedai kopi artisanal dengan inspirasi rempah-rempah Nusantara.</p>
+          <a href="#" class="work-link">Lihat Proyek <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="section-label">
+      <span>—</span> Keahlian <span class="section-num">04</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skills-left reveal-left">
+        <h2 class="section-title">Senjata <em>Kreatif</em><br/>Saya</h2>
+        <p>Kombinasi antara desain dan kode memungkinkan saya membangun produk digital dari konsep hingga produksi.</p>
       </div>
-
-      <div class="hobi-card">
-        <div class="icon">💻</div>
-        <h4>Ngoding</h4>
-        <p>Eksplorasi teknologi web baru, memecahkan masalah logika, dan bereksperimen membuat side project.</p>
+      <div class="skills-right reveal-right">
+        <div class="skill-category">
+          <h4>Desain</h4>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">Figma</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">UI/UX Design</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Motion Design</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Brand Identity</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h4>Development</h4>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">HTML / CSS</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="98"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">React.js</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Node.js</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div class="hobi-card">
-        <div class="icon">⚽</div>
-        <h4>Futsal</h4>
-        <p>Menjaga stamina, melatih kerja sama tim, dan rutin bermain futsal bareng teman-teman setiap minggu.</p>
-      </div>
-
+    <!-- Tech Tags -->
+    <div class="tech-tags reveal-up">
+      <span class="tag">Figma</span>
+      <span class="tag">React</span>
+      <span class="tag">Next.js</span>
+      <span class="tag">GSAP</span>
+      <span class="tag">Tailwind</span>
+      <span class="tag">Framer</span>
+      <span class="tag">After Effects</span>
+      <span class="tag">Illustrator</span>
+      <span class="tag">Webflow</span>
+      <span class="tag">TypeScript</span>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="content" id="contact">
-    <div class="contact-box">
-      <h3>Mari Terhubung!</h3>
-      <p>Tertarik untuk mabar, diskusi seputar pemrograman, atau berkolaborasi dalam project kreatif? Hubungi saya melalui salah satu platform di bawah ini.</p>
-      <div class="btn-wrap">
-        <a href="mailto:rafkanurisa7@gmail.com" class="btn btn-primary">
-          <i class="fa-solid fa-envelope"></i> Email Saya
-        </a>
-        <a href="https://wa.me/6289521606404" target="_blank" class="btn btn-wa">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="https://instagram.com/rapkanr_" target="_blank" class="btn btn-ig">
-          <i class="fa-brands fa-instagram"></i> Instagram
-        </a>
+  <section class="contact" id="contact">
+    <div class="section-label">
+      <span>—</span> Kontak <span class="section-num">05</span>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-text reveal-up">
+        <h2 class="section-title">Punya proyek <em>menarik</em>?</h2>
+        <p>Mari wujudkan bersama. Saya selalu terbuka untuk kolaborasi dan peluang baru.</p>
+        <div class="contact-info">
+          <a href="https://instagram.com/rafkanr_" target="_blank" class="contact-item">
+            <span class="contact-icon">◈</span>
+            @rafkanr_
+          </a>
+          <a href="https://wa.me/6289521606404" target="_blank" class="contact-item">
+            <span class="contact-icon">✆</span>
+            0895-2160-6404
+          </a>
+        </div>
+        <div class="social-links">
+          <a href="https://instagram.com/rafkanr_" target="_blank" class="social-link">Instagram</a>
+          <a href="https://wa.me/6289521606404" target="_blank" class="social-link">WhatsApp</a>
+          <a href="#" class="social-link">GitHub</a>
+          <a href="#" class="social-link">LinkedIn</a>
+        </div>
       </div>
+      <form class="contact-form reveal-right" id="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" placeholder=" " required />
+          <label for="name">Nama Anda</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder=" " required />
+          <label for="email">Email Anda</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder=" " rows="4" required></textarea>
+          <label for="message">Ceritakan Proyek Anda</label>
+        </div>
+        <button type="submit" class="btn-primary full-width">
+          <span class="btn-text">Kirim Pesan</span>
+          <span class="btn-icon">→</span>
+        </button>
+        <div class="form-success" id="form-success">
+          <span class="gold">✓</span> Pesan terkirim! Saya akan segera menghubungi Anda.
+        </div>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    &copy; <span id="year"></span> | Portofolio Dirancang oleh Rafka Nurisa
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">RN<span class="gold">.</span></div>
+      <p class="footer-copy">© 2025 Rafka Nurisa. Dibuat dengan <span class="gold">♥</span> di Indonesia.</p>
+      <a href="#hero" class="back-top">↑ Ke Atas</a>
+    </div>
   </footer>
 
-  <!-- Memanggil File JavaScript Eksternal -->
   <script src="script.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Rafka Nurisa</title>
-  <!-- Font Awesome untuk Icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
-  <!-- Memanggil File CSS Eksternal -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- Navbar -->
-  <header>
-    <h2>Rafka Nurisa</h2>
-    <ul>
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#hobi">Hobi</a></li>
-      <li><a href="#contact">Kontak</a></li>
-    </ul>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="about">
-    <div class="avatar">RN</div>
-    <h1>Rafka Nurisa</h1>
-    <div class="typewriter-container">
-      Saya adalah <span id="typewriter"></span>
-    </div>
-    <div class="btn-wrap">
-      <a href="https://wa.me/6289521606404" target="_blank" class="btn btn-wa">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-      </a>
-      <a href="https://instagram.com/rapkanr_" target="_blank" class="btn btn-ig">
-        <i class="fa-brands fa-instagram"></i> Instagram
-      </a>
-    </div>
-  </section>
-
-  <!-- Hobi Section -->
-  <section class="content" id="hobi">
-    <h3>Hobi & Minat</h3>
-    <div class="hobi-grid">
-
-      <div class="hobi-card">
-        <div class="icon-box">
-          <i class="fa-solid fa-gamepad"></i>
-        </div>
-        <h4>Gaming</h4>
-        <p>Bermain game mobile dan PC di waktu senggang untuk melatih fokus, analisis taktis, dan refreshing.</p>
-      </div>
-
-      <div class="hobi-card">
-        <div class="icon-box">
-          <i class="fa-solid fa-code"></i>
-        </div>
-        <h4>Ngoding</h4>
-        <p>Eksplorasi teknologi web modern, memecahkan masalah logika koding, dan membangun proyek sampingan.</p>
-      </div>
-
-      <div class="hobi-card">
-        <div class="icon-box">
-          <i class="fa-solid fa-futbol"></i>
-        </div>
-        <h4>Futsal</h4>
-        <p>Rutin berolahraga setiap minggu untuk menjaga stamina fisik, kesehatan, dan melatih kerja sama tim.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="content" id="contact">
-    <div class="contact-box">
-      <h3>Mari Berkolaborasi</h3>
-      <p>Tertarik untuk berdiskusi seputar pengembangan perangkat lunak, kolaborasi proyek, atau hal lainnya? Jangan ragu untuk menghubungi saya.</p>
-      <div class="btn-wrap">
-        <a href="mailto:rafkanurisa7@gmail.com" class="btn btn-primary">
-          <i class="fa-solid fa-envelope"></i> Email Saya
-        </a>
-        <a href="https://wa.me/6289521606404" target="_blank" class="btn btn-wa">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    &copy; <span id="year"></span> | Portofolio Resmi Rafka Nurisa. All Rights Reserved.
-  </footer>
-
-  <!-- Memanggil File JavaScript Eksternal -->
-  <script src="script.js"></script>
-</body>
->>>>>>> c948910 (Update website)
 </html>
